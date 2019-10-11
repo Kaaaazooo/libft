@@ -6,7 +6,7 @@
 /*   By: sabrugie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 13:36:05 by sabrugie          #+#    #+#             */
-/*   Updated: 2019/10/11 16:36:47 by sabrugie         ###   ########.fr       */
+/*   Updated: 2019/10/11 17:35:59 by sabrugie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,5 +56,9 @@ char				*ft_itoa(int n);
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void				*ft_memccpy(void *dst, const void *src, int c, size_t n);
 char				*ft_strndup(const char *s1, size_t n);
-
+t_list				*ft_lstnew(void *content);
+void				ft_lstadd_back(t_list **alst, t_list *new);
+void				ft_lstadd_front(t_list **alst, t_list *new);
+int					ft_lstsize(t_list *lst);
+void				ft_lstiter(t_list *lst, void (*f)(void *));
 #endif

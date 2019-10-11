@@ -6,7 +6,7 @@
 /*   By: sabrugie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/11 11:19:21 by sabrugie          #+#    #+#             */
-/*   Updated: 2019/10/11 11:35:03 by sabrugie         ###   ########.fr       */
+/*   Updated: 2019/10/11 17:29:09 by sabrugie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,4 +15,5 @@
 void	ft_lstadd_front(t_list **alst, t_list *new)
 {
 	new->next = *alst;
+	alst = &new;
 }
