@@ -6,11 +6,12 @@
 /*   By: sabrugie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 15:15:57 by sabrugie          #+#    #+#             */
-/*   Updated: 2019/10/11 11:13:40 by sabrugie         ###   ########.fr       */
+/*   Updated: 2019/10/11 11:47:42 by sabrugie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 static char			**count_strs(const char *s, char c)
 {
@@ -35,7 +36,7 @@ static char			**count_strs(const char *s, char c)
 	return (res);
 }
 
-char				**ft_split(char const *s, char c)
+char				**ft_strsplit(char const *s, char c)
 {
 	char			**res;
 	unsigned int	i;
@@ -61,14 +62,4 @@ char				**ft_split(char const *s, char c)
 	}
 	res[i] = 0;
 	return (res);
-}
-
-int		main(int ac, char **av)
-{
-	char			**strs;
-
-	if (ac == 0)
-		return (0);
-	strs = ft_split(av[1], av[2][0]);
-	return (0);
 }

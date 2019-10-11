@@ -6,70 +6,68 @@
 /*   By: sabrugie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 13:19:42 by sabrugie          #+#    #+#             */
-/*   Updated: 2019/10/10 14:59:23 by sabrugie         ###   ########.fr       */
+/*   Updated: 2019/10/11 13:56:57 by sabrugie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-static unsigned int			ft_countset(char const *str, char const *set)
+static int			is_set(const char c, char const *set)
 {
 	unsigned int	i;
-	unsigned int	j;
-	unsigned int	count;
 
 	i = 0;
-	count = 0;
-	while (str[i])
+	while (set[i])
 	{
-		j = 0;
-		while (set[j])
-		{
-			if (set[j] == str[i])
-				count++;
-			j++;
-		}
+		if (c == set[i])
+			return (1);
 		i++;
 	}
-	return (count);
+	return (0);
 }
 
-static unsigned char		*ft_skipset(char const *str,
-									char const *set, unsigned char *res)
+static int			skip_set(char const *s1, char const *set)
 {
+	unsigned int i;
+
+	i = 0;
+	while (s1[i] && is_set(s1[i], set))
+		i++;
+	return (i);
+}
+
+char				*ft_strtrim(char const *s1, char const *set)
+{
+	unsigned int	start;
+	unsigned int	end;
 	unsigned int	i;
-	unsigned int	j;
-	unsigned int	k;
-
-	i = 0;
-	k = 0;
-	while (str[i])
-	{
-		j = 0;
-		while (set[j])
-		{
-			if (set[j] == str[i])
-				break ;
-			j++;
-		}
-		if (!set[j])
-		{
-			res[k] = (unsigned char)str[i];
-			k++;
-		}
-		i++;
-	}
-	res[k] = 0;
-	return (res);
-}
-
-char						*ft_strtrim(char const *s1, char const *set)
-{
 	unsigned char	*res;
 
-	if (!(res = malloc(sizeof(*res) * (ft_strlen(s1) -
-											ft_countset(s1, set) + 1))))
+	i = 0;
+	if (s1 == 0 || s1[0] == 0)
+		return ((char*)s1);
+	start = skip_set(s1, set);
+	end = ft_strlen(s1);
+	if (start == end)
+		return ("");
+	while (is_set(s1[end - 1], set))
+		end--;
+	if (!(res = malloc(sizeof(*res) * (end - start + 1))))
 		return (0);
-	res = ft_skipset(s1, set, res);
+	res[end - start] = 0;
+	while (i < end - start)
+	{
+		res[i] = s1[start + i];
+		i++;
+	}
 	return ((char*)res);
+}
+
+int		main(int ac, char **av)
+{
+	if (ac == 0)
+		return (0);
+	printf("%s\n", ft_strtrim(av[1], av[2]));
+	return (0);
 }

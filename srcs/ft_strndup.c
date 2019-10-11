@@ -6,7 +6,7 @@
 /*   By: sabrugie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 16:10:58 by sabrugie          #+#    #+#             */
-/*   Updated: 2019/10/10 16:27:45 by sabrugie         ###   ########.fr       */
+/*   Updated: 2019/10/11 11:14:01 by sabrugie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,10 @@ char	*ft_strndup(const char *s1, size_t n)
 	char			*s2;
 
 	i = 0;
-	while (s1[i] && i < n)
-		i++;
-	if (!(s2 = malloc(sizeof(*s2) * (i  + 1))))
+	if (!(s2 = malloc(sizeof(*s2) * (n + 1))))
 		return (0);
 	i = 0;
-	while (s1[i])
+	while (i < n)
 	{
 		s2[i] = s1[i];
 		i++;
