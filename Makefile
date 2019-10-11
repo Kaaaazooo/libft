@@ -6,7 +6,7 @@
 #    By: sabrugie <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/07/10 19:12:22 by sabrugie          #+#    #+#              #
-#    Updated: 2019/10/11 11:34:44 by sabrugie         ###   ########.fr        #
+#    Updated: 2019/10/11 17:01:37 by sabrugie         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,11 +29,12 @@ SRCS =	$(SRCS_P)ft_atoi.c $(SRCS_P)ft_bzero.c $(SRCS_P)ft_isalnum.c \
 		$(SRCS_P)ft_putstr_fd.c $(SRCS_P)ft_putendl_fd.c \
 		$(SRCS_P)ft_putchar_fd.c $(SRCS_P)ft_strcpy.c $(SRCS_P)ft_strcat.c \
 		$(SRCS_P)ft_strtrim.c $(SRCS_P)ft_itoa.c  $(SRCS_P)ft_strmapi.c \
-		$(SRCS_P)ft_strndup.c $(SRCS_P)ft_strsplit.c
+		$(SRCS_P)ft_strndup.c $(SRCS_P)ft_split.c
 
 SRCS_BONUS =	$(SRCS_P)ft_lstadd_front_bonus.c $(SRCS_P)ft_lstdelone_bonus.c \
 				$(SRCS_P)ft_lstiter_bonus.c $(SRCS_P)ft_lstlast_bonus.c \
 				$(SRCS_P)ft_lstnew_bonus.c $(SRCS_P)ft_lstsize_bonus.c \
+				$(SRCS_P)ft_lstadd_back_bonus.c
 
 OBJS = $(SRCS:.c=.o)
 OBJS_BONUS = $(SRCS_BONUS:.c=.o)
@@ -54,4 +55,4 @@ fclean: clean
 fclean_bonus: clean_bonus
 	rm -rf $(NAME)
 re: fclean all
-re_bonus: fclean_bonnus all_bonus
+re_bonus: fclean_bonus bonus

@@ -6,7 +6,7 @@
 /*   By: sabrugie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 15:15:57 by sabrugie          #+#    #+#             */
-/*   Updated: 2019/10/11 11:13:40 by sabrugie         ###   ########.fr       */
+/*   Updated: 2019/10/11 15:40:17 by sabrugie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,14 +61,4 @@ char				**ft_split(char const *s, char c)
 	}
 	res[i] = 0;
 	return (res);
-}
-
-int		main(int ac, char **av)
-{
-	char			**strs;
-
-	if (ac == 0)
-		return (0);
-	strs = ft_split(av[1], av[2][0]);
-	return (0);
 }
