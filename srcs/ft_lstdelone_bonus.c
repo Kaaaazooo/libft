@@ -6,7 +6,7 @@
 /*   By: sabrugie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/11 11:24:00 by sabrugie          #+#    #+#             */
-/*   Updated: 2019/10/11 11:25:43 by sabrugie         ###   ########.fr       */
+/*   Updated: 2019/10/12 20:12:23 by sabrugie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,6 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	del(lst);
+	del(lst->content);
+	free(lst);
 }
