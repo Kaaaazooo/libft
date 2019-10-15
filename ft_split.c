@@ -5,79 +5,70 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: sabrugie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/10 15:15:57 by sabrugie          #+#    #+#             */
-/*   Updated: 2019/10/14 15:35:50 by sabrugie         ###   ########.fr       */
+/*   Created: 2019/10/15 16:52:38 by sabrugie          #+#    #+#             */
+/*   Updated: 2019/10/15 16:59:00 by sabrugie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-static size_t		count_strs(const char *s, char c)
+static size_t		count(char const *s, char c)
 {
-	size_t			i;
-	size_t			count;
+	size_t	i;
+	size_t	count;
 
 	i = 0;
 	count = 0;
-	while (s[i] == c)
-		i++;
 	while (s[i])
 	{
-		while (s[i] != c)
-			i++;
 		while (s[i] == c)
 			i++;
 		count++;
+		while (s[i] && s[i] != c)
+			i++;
 	}
 	return (count);
 }
 
-static void			free_strs(char **res, size_t len)
+static void			*free_strs(char **strs)
 {
-	size_t			i;
+	int i;
 
 	i = 0;
-	while (i <= len)
+	while (strs[i] != 0)
 	{
-		free(res[i]);
+		free(strs[i]);
 		i++;
 	}
-}
-
-static char			**ft_assign(char const *s, char **res, char c)
-{
-	unsigned int	i;
-	unsigned int	len;
-
-	i = 0;
-	while (*s)
-	{
-		len = 0;
-		while (*s == c)
-			s++;
-		if (*s)
-		{
-			while (s[len] != c)
-				len++;
-			if (!(res[i] = ft_strndup(s, len)))
-			{
-				free_strs(res, i);
-				return (0);
-			}
-			s += len;
-			i++;
-		}
-	}
-	res[i] = 0;
-	return (res);
+	free(strs);
+	return (0);
 }
 
 char				**ft_split(char const *s, char c)
 {
-	char			**res;
+	char	**res;
+	int		i;
+	int		j;
 
-	if (!s || !(res = malloc(sizeof(char*) * (count_strs(s, c) + 1))))
+	if (!s)
 		return (0);
-	return (res = ft_assign(s, res, c));
+	if (!(res = malloc(sizeof(char*) * (count(s, c) + 1))))
+		return (0);
+	j = 0;
+	while (*s)
+	{
+		if (*s == c)
+		{
+			s++;
+			continue ;
+		}
+		i = 0;
+		while (s[i] && s[i] != c)
+			i++;
+		if (!(res[j++] = ft_strndup(s, i)))
+			return (free_strs(res));
+		s += i;
+	}
+	res[j] = 0;
+	return (res);
 }

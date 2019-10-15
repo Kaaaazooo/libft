@@ -6,9 +6,11 @@
 /*   By: sabrugie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 13:12:00 by sabrugie          #+#    #+#             */
-/*   Updated: 2019/10/10 13:15:09 by sabrugie         ###   ########.fr       */
+/*   Updated: 2019/10/15 14:17:04 by sabrugie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strcat(char *s1, const char *s2)
 {
