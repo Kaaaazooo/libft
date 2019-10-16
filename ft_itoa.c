@@ -6,7 +6,7 @@
 /*   By: sabrugie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 14:18:57 by sabrugie          #+#    #+#             */
-/*   Updated: 2019/10/16 16:17:12 by sabrugie         ###   ########.fr       */
+/*   Updated: 2019/10/16 17:57:12 by sabrugie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 static unsigned int		get_size(int n)
 {
-	size_t		len;
-	size_t		nb;
+	unsigned int	len;
+	unsigned int	nb;
 
 	len = 0;
 	nb = 0;
