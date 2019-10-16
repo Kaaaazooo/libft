@@ -6,7 +6,7 @@
 /*   By: sabrugie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 14:18:57 by sabrugie          #+#    #+#             */
-/*   Updated: 2019/10/15 15:06:12 by sabrugie         ###   ########.fr       */
+/*   Updated: 2019/10/16 16:17:12 by sabrugie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 static unsigned int		get_size(int n)
 {
-	unsigned int	len;
-	unsigned int	nb;
+	size_t		len;
+	size_t		nb;
 
 	len = 0;
 	nb = 0;
@@ -51,11 +51,11 @@ char					*ft_itoa(int n)
 	if (n < 0)
 	{
 		neg = 1;
-		nb = n * -1;
+		nb = (unsigned int)(n * -1);
 		str[0] = '-';
 	}
 	else
-		nb = n;
+		nb = (unsigned int)n;
 	while (len-- > neg)
 	{
 		str[len] = nb % 10 + '0';

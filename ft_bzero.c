@@ -6,7 +6,7 @@
 /*   By: sabrugie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 09:02:26 by sabrugie          #+#    #+#             */
-/*   Updated: 2019/10/08 09:09:28 by sabrugie         ###   ########.fr       */
+/*   Updated: 2019/10/16 15:58:46 by sabrugie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	unsigned int	i;
+	size_t			i;
 	char			*str;
 
 	str = s;

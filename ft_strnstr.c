@@ -6,7 +6,7 @@
 /*   By: sabrugie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 10:19:40 by sabrugie          #+#    #+#             */
-/*   Updated: 2019/10/08 14:25:38 by sabrugie         ###   ########.fr       */
+/*   Updated: 2019/10/16 16:08:39 by sabrugie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	unsigned int		i;
-	unsigned int		j;
+	size_t		i;
+	size_t		j;
 
 	i = 0;
 	if (*needle == 0 || needle == 0)

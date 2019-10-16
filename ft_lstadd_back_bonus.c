@@ -6,7 +6,7 @@
 /*   By: sabrugie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/11 16:07:19 by sabrugie          #+#    #+#             */
-/*   Updated: 2019/10/14 09:41:20 by sabrugie         ###   ########.fr       */
+/*   Updated: 2019/10/16 14:19:06 by sabrugie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_lstadd_back(t_list **alst, t_list *new)
 {
 	t_list	*tmp;
 
+	if (alst == 0)
+		return ;
 	if (*alst == 0)
 	{
 		*alst = new;

@@ -6,7 +6,7 @@
 /*   By: sabrugie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 13:19:42 by sabrugie          #+#    #+#             */
-/*   Updated: 2019/10/14 17:02:16 by sabrugie         ###   ########.fr       */
+/*   Updated: 2019/10/16 16:12:06 by sabrugie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int			is_set(const char c, char const *set)
 {
-	unsigned int	i;
+	size_t		i;
 
 	i = 0;
 	while (set[i])
@@ -28,7 +28,7 @@ static int			is_set(const char c, char const *set)
 
 static int			skip_set(char const *s1, char const *set)
 {
-	unsigned int i;
+	size_t		i;
 
 	i = 0;
 	while (s1[i] && is_set(s1[i], set))
@@ -38,9 +38,9 @@ static int			skip_set(char const *s1, char const *set)
 
 char				*ft_strtrim(char const *s1, char const *set)
 {
-	unsigned int	start;
-	unsigned int	end;
-	unsigned int	i;
+	size_t			start;
+	size_t			end;
+	size_t			i;
 	unsigned char	*res;
 
 	i = 0;

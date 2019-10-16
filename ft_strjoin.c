@@ -6,7 +6,7 @@
 /*   By: sabrugie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 17:42:46 by sabrugie          #+#    #+#             */
-/*   Updated: 2019/10/15 14:25:44 by sabrugie         ###   ########.fr       */
+/*   Updated: 2019/10/16 16:11:12 by sabrugie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char			*str;
-	unsigned int	len1;
-	unsigned int	len2;
+	char		*str;
+	size_t		len1;
+	size_t		len2;
 
 	len1 = 0;
 	len2 = 0;

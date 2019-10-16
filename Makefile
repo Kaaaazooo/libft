@@ -6,7 +6,7 @@
 #    By: sabrugie <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/07/10 19:12:22 by sabrugie          #+#    #+#              #
-#    Updated: 2019/10/15 17:44:59 by sabrugie         ###   ########.fr        #
+#    Updated: 2019/10/16 17:10:33 by sabrugie         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,21 +39,26 @@ SRCS_BONUS =	$(SRCS_P)ft_lstadd_front_bonus.c $(SRCS_P)ft_lstdelone_bonus.c \
 
 OBJS = $(SRCS:.c=.o)
 OBJS_BONUS = $(SRCS_BONUS:.c=.o)
+
 all: $(NAME)
 bonus: $(NAME_BONUS)
+
 $(NAME): $(OBJS)
 	ar -rc $(NAME) $(OBJS)
 	ranlib $(NAME)
 $(NAME_BONUS): $(OBJS_BONUS)
 	ar -rc $(NAME_BONUS) $(OBJS_BONUS)
 	ranlib $(NAME_BONUS)
+
 clean:
 	rm -rf $(OBJS)
 clean_bonus:
 	rm -rf $(OBJS_BONUS)
+
 fclean: clean
 	rm -rf $(NAME)
 fclean_bonus: clean_bonus
-	rm -rf $(NAME)
+	rm -rf $(NAME_BONUS)
+
 re: fclean all
 re_bonus: fclean_bonus bonus

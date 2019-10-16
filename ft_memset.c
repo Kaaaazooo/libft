@@ -6,7 +6,7 @@
 /*   By: sabrugie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 08:24:39 by sabrugie          #+#    #+#             */
-/*   Updated: 2019/10/14 16:00:06 by sabrugie         ###   ########.fr       */
+/*   Updated: 2019/10/16 15:58:31 by sabrugie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	unsigned int	i;
+	size_t			i;
 	char			*str;
 
 	str = b;

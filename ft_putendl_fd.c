@@ -6,7 +6,7 @@
 /*   By: sabrugie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 18:03:18 by sabrugie          #+#    #+#             */
-/*   Updated: 2019/10/15 18:35:28 by sabrugie         ###   ########.fr       */
+/*   Updated: 2019/10/16 16:16:11 by sabrugie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	unsigned int	i;
+	size_t		i;
 
 	i = 0;
 	if (!s)

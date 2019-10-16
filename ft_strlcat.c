@@ -6,7 +6,7 @@
 /*   By: sabrugie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 16:42:30 by sabrugie          #+#    #+#             */
-/*   Updated: 2019/10/08 08:23:29 by sabrugie         ###   ########.fr       */
+/*   Updated: 2019/10/16 16:08:08 by sabrugie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	unsigned int i;
-	unsigned int j;
-	unsigned int total;
+	size_t	i;
+	size_t	j;
+	size_t	total;
 
 	i = 0;
 	j = 0;

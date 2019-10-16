@@ -6,7 +6,7 @@
 /*   By: sabrugie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 16:52:38 by sabrugie          #+#    #+#             */
-/*   Updated: 2019/10/15 16:59:00 by sabrugie         ###   ########.fr       */
+/*   Updated: 2019/10/16 16:13:05 by sabrugie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 static size_t		count(char const *s, char c)
 {
-	size_t	i;
-	size_t	count;
+	size_t		i;
+	size_t		count;
 
 	i = 0;
 	count = 0;
@@ -32,7 +32,7 @@ static size_t		count(char const *s, char c)
 
 static void			*free_strs(char **strs)
 {
-	int i;
+	size_t		i;
 
 	i = 0;
 	while (strs[i] != 0)
@@ -46,9 +46,9 @@ static void			*free_strs(char **strs)
 
 char				**ft_split(char const *s, char c)
 {
-	char	**res;
-	int		i;
-	int		j;
+	char		**res;
+	size_t		i;
+	size_t		j;
 
 	if (!s)
 		return (0);

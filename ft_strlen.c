@@ -6,7 +6,7 @@
 /*   By: sabrugie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 13:31:44 by sabrugie          #+#    #+#             */
-/*   Updated: 2019/10/14 13:37:52 by sabrugie         ###   ########.fr       */
+/*   Updated: 2019/10/16 16:01:07 by sabrugie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	ft_strlen(const char *s)
 {
-	unsigned int i;
+	size_t	i;
 
 	i = 0;
 	while (s[i])

@@ -6,7 +6,7 @@
 /*   By: sabrugie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 09:16:44 by sabrugie          #+#    #+#             */
-/*   Updated: 2019/10/08 14:34:07 by sabrugie         ###   ########.fr       */
+/*   Updated: 2019/10/16 16:07:15 by sabrugie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int		ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	unsigned int		i;
+	size_t		i;
 
 	i = 0;
 	if (n == 0)

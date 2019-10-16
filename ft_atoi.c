@@ -6,7 +6,7 @@
 /*   By: sabrugie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 08:45:31 by sabrugie          #+#    #+#             */
-/*   Updated: 2019/10/14 15:48:05 by sabrugie         ###   ########.fr       */
+/*   Updated: 2019/10/16 16:09:13 by sabrugie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int		ft_atoi(const char *str)
 	long long		res;
 	long long		max;
 	int				sign;
-	int				i;
+	size_t			i;
 
 	res = 0;
 	max = 922337203685477580;
@@ -38,5 +38,5 @@ int		ft_atoi(const char *str)
 			return (sign > 0 ? -1 : 0);
 		res = res * 10 + str[i++] - 48;
 	}
-	return ((int)(res * sign));
+	return (((int)res * sign));
 }

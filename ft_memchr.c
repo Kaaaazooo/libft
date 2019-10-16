@@ -6,7 +6,7 @@
 /*   By: sabrugie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 10:49:58 by sabrugie          #+#    #+#             */
-/*   Updated: 2019/10/10 10:18:29 by sabrugie         ###   ########.fr       */
+/*   Updated: 2019/10/16 16:00:22 by sabrugie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	unsigned int	i;
+	size_t			i;
 	unsigned char	*str;
 
 	i = 0;
