@@ -6,7 +6,7 @@
 #    By: sabrugie <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/07/10 19:12:22 by sabrugie          #+#    #+#              #
-#    Updated: 2019/10/16 17:10:33 by sabrugie         ###   ########.fr        #
+#    Updated: 2019/10/16 17:26:24 by sabrugie         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,7 @@ SRCS =	$(SRCS_P)ft_atoi.c $(SRCS_P)ft_bzero.c $(SRCS_P)ft_isalnum.c \
 		$(SRCS_P)ft_putstr_fd.c $(SRCS_P)ft_putendl_fd.c \
 		$(SRCS_P)ft_putchar_fd.c $(SRCS_P)ft_strcpy.c $(SRCS_P)ft_strcat.c \
 		$(SRCS_P)ft_strtrim.c $(SRCS_P)ft_itoa.c  $(SRCS_P)ft_strmapi.c \
-		$(SRCS_P)ft_strndup.c $(SRCS_P)ft_split.c
+		$(SRCS_P)ft_strndup.c $(SRCS_P)ft_split.c $(SRCS_P)ft_calloc.c
 
 SRCS_BONUS =	$(SRCS_P)ft_lstadd_front_bonus.c $(SRCS_P)ft_lstdelone_bonus.c \
 				$(SRCS_P)ft_lstiter_bonus.c $(SRCS_P)ft_lstlast_bonus.c \
