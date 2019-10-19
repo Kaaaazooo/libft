@@ -6,7 +6,7 @@
 #    By: sabrugie <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/07/10 19:12:22 by sabrugie          #+#    #+#              #
-#    Updated: 2019/10/19 18:44:09 by sabrugie         ###   ########.fr        #
+#    Updated: 2019/10/19 18:51:53 by sabrugie         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,14 +40,13 @@ OBJS = $(SRCS:.c=.o)
 OBJS_BONUS = $(SRCS_BONUS:.c=.o)
 
 all: $(NAME)
-bonus: $(NAME_BONUS)
 
 $(NAME): $(OBJS)
 	ar -rc $(NAME) $(OBJS)
 	ranlib $(NAME)
-$(NAME_BONUS): $(OBJS_BONUS)
-	ar -rc $(NAME) $(OBJS) $(OBJS_BONUS)
-	ranlib $(NAME_BONUS)
+bonus: $(OBJS_BONUS)
+	ar -rc $(NAME) $(OBJS_BONUS)
+	ranlib $(NAME)
 
 clean:
 	rm -rf $(OBJS) $(OBJS_BONUS)
