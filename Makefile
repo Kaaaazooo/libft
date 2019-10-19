@@ -6,12 +6,11 @@
 #    By: sabrugie <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/07/10 19:12:22 by sabrugie          #+#    #+#              #
-#    Updated: 2019/10/16 17:25:33 by sabrugie         ###   ########.fr        #
+#    Updated: 2019/10/19 18:44:09 by sabrugie         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-NAME_BONUS = libft_bonus.a
 CC = gcc
 HEADER = ./libft.h
 SRCS_P = ./
@@ -47,18 +46,13 @@ $(NAME): $(OBJS)
 	ar -rc $(NAME) $(OBJS)
 	ranlib $(NAME)
 $(NAME_BONUS): $(OBJS_BONUS)
-	ar -rc $(NAME_BONUS) $(OBJS_BONUS)
+	ar -rc $(NAME) $(OBJS) $(OBJS_BONUS)
 	ranlib $(NAME_BONUS)
 
 clean:
-	rm -rf $(OBJS)
-clean_bonus:
-	rm -rf $(OBJS_BONUS)
+	rm -rf $(OBJS) $(OBJS_BONUS)
 
 fclean: clean
 	rm -rf $(NAME)
-fclean_bonus: clean_bonus
-	rm -rf $(NAME_BONUS)
 
 re: fclean all
-re_bonus: fclean_bonus bonus

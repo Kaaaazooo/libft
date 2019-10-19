@@ -6,7 +6,7 @@
 /*   By: sabrugie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 09:20:24 by sabrugie          #+#    #+#             */
-/*   Updated: 2019/10/16 16:00:02 by sabrugie         ###   ########.fr       */
+/*   Updated: 2019/10/19 16:43:49 by sabrugie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,5 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		while (++i < len)
 			dest_u[i] = src_u[i];
 	}
-	return (dest_u);
+	return (dst);
 }

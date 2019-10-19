@@ -6,7 +6,7 @@
 /*   By: sabrugie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 13:19:42 by sabrugie          #+#    #+#             */
-/*   Updated: 2019/10/17 12:47:42 by sabrugie         ###   ########.fr       */
+/*   Updated: 2019/10/16 18:45:06 by sabrugie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ char				*ft_strtrim(char const *s1, char const *set)
 	unsigned char	*res;
 
 	i = 0;
-	if (s1 == 0 || s1[0] == 0 || set == 0)
+	if (s1 == 0 || s1[0] == 0)
 		return ((char*)s1);
 	start = skip_set(s1, set);
 	end = ft_strlen(s1);

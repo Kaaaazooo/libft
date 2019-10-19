@@ -6,7 +6,7 @@
 /*   By: sabrugie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 15:25:34 by sabrugie          #+#    #+#             */
-/*   Updated: 2019/10/16 15:59:44 by sabrugie         ###   ########.fr       */
+/*   Updated: 2019/10/19 14:42:16 by sabrugie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 		{
 			d[i] = s[i];
 			if (d[i] == (unsigned char)c)
-				return (&d[i] + 1);
+				return (dst + i + 1);
 			i++;
 		}
 	}
